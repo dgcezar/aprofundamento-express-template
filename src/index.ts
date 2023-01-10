@@ -55,7 +55,7 @@ app.put("/accounts/:id", (req: Request, res: Response) => {
     if (account) {
         account.id = newId || account.id
         account.ownerName = newOwnerName || account.ownerName
-        account.balance =isNaN(newBalance) ? account.balance : newBalance
+        account.balance = isNaN(newBalance) ? account.balance : newBalance
         account.type = newType || account.type
         res.status(200).send("Item atualizado com sucesso!")
     } else {
